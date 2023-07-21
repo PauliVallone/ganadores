@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: letrajuegazapata;
+  src: url(../Inversionz.ttf);
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: letrajuegazapata;
+}
+
+.video-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#video-laser {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.title {
+  font-size: 50px;
+  padding-top: 20px;
+  text-align: center;
+  grid-area: titulo;
+}
+
+.ganadornoche {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  font-size: 35px;
+  grid-area: ganadornoche;
+}
+
+.ganador-img {
+  position: relative;
+  display: inline-block;
+  align-content: center;
+  grid-area: ganadorimg;
+}
+.ganador-nombre {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  font-size: 50px;
+  padding-top: 70px;
+  grid-area: ganador;
+}
+
+.siguientefase {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  padding-top: 20px;
+  grid-area: siguientefase;
+}
+.equipo1-nombre {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  grid-area: equipo1;
+}
+.equipo2-nombre {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  grid-area: equipo2;
+}
+.equipo3-nombre {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  grid-area: equipo3;
+}
+.equipo4-nombre {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  grid-area: equipo4;
+}
+
+.final-container {
+  height: 100vh;
+  width: 100vh;
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "titulo titulo"
+    "ganadornoche ganadornoche"
+    "ganadorimg ganador"
+    "siguientefase siguientefase"
+    "equipo1 equipo1"
+    "equipo2 equipo2"
+    "equipo3 equipo3"
+    "equipo4 equipo4";
+}
